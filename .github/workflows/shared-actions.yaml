@@ -1,0 +1,16 @@
+### Workflow Name
+name: Shared Actions Example
+
+### Trigger
+on:
+  workflow_dispatch: # Manual Execution
+
+### What is executed when workflow runs...
+jobs:
+  checkout-repo: # Job Name
+    runs-on: ubuntu-latest # Runtime/OS-version -> Ubuntu/MacOs
+
+    steps:
+      - uses: actions/checkout@v2 # Use a gitHub action from the marketplace --- @ specifies a version
+      # with: # Passes additional input parameters if needed, see documentation
+      - run: ls
