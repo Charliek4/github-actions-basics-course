@@ -1,0 +1,16 @@
+### Workflow Name
+name: Hello World
+
+### Trigger
+on:
+  workflow_dispatch: # Allows Manual Execution
+
+### What is executed when workflow runs...
+jobs:
+  print-hello-world: # Job Name
+    runs-on: ubuntu-latest # Runtime/OS-version -> Ubuntu/MacOs
+
+    steps:
+    - name: Say hello
+    run: echo "Hello World"
+
